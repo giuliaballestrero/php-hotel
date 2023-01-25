@@ -11,7 +11,6 @@
 
 </head>
 <body>
-
     <?php
 
         $hotels = [
@@ -54,7 +53,27 @@
 
         ];
 
+        //var_dump($hotels);
     ?>
+
+    <header>
+        <section class="container">
+            <h1 class="pt-5">Filtro di ricerca</h1>
+            <form class="py-3" action="./index.php" method="GET">
+                <label for="parkingFilter" class="form-label">Search Hotels...</label>
+                <input class="m-3" type="text" class="form-control" name="parkingFilter">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <hr>
+
+            <?php 
+                
+            ?>
+
+
+        </section>
+    </header>
 
     <main>
         
@@ -71,6 +90,8 @@
             }
         
         ?>
+
+        <hr>
 
         <h2 class="py-5">List of Hotels</h2>
 
