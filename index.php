@@ -58,15 +58,59 @@
 
     <main>
         
+    <section class="container">
+
+        <h1 class="py-4">Array chiave => valore</h1>
         <?php 
         
             foreach($hotels as $hotel) {
                 foreach($hotel as $key => $value) {
-                    echo "$key => $value" . ", ";
+                    echo "$key => $value . ","";
             }
                 echo "<br/>";
             }
+        
         ?>
+
+        <h2 class="py-5">List of Hotels</h2>
+
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-dark">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">Distance to center</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php 
+                    
+                    foreach($hotels as $hotel) {
+
+                        echo "
+                            <tr>
+                            <th scope='row'></th>
+                        ";
+
+                        foreach($hotel as $key => $value) {
+                            echo "
+                                <td>$value</td>
+                            ";
+                        }
+
+                        echo "</tr>";
+                    }
+                
+                ?>
+
+            </tbody>
+        </table>
+    </section>
+        
 
     </main>
    
